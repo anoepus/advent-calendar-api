@@ -1,0 +1,20 @@
+{
+  "name": "adventcalendar",
+  "version": "0.1.0",
+  "description": "Advent calendar project for the full stack node.js exams",
+  "license": "MIT",
+  "author": "Anoep",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
