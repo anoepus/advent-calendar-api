@@ -1,26 +1,15 @@
 import { Router } from "express";
 const router = Router(); // router function from the express libary.
 
-//health
-router.get("/health", (req, res) => {
-    res.send({ status: "ok", uptime: process.uptime() });
-});
-
-//index
-router.get("/", (req, res) => {
-    res.send({ data: "Index" });
-});
-
 import { getCalendarDay, isDayUnlocked, getCalendarDayInfo } from "../service/calendarService.js";
-
+// GET current calendar day
 router.get("/api/calendarDays", (req , res) => {
     const calendarDay = getCalendarDay();
     res.status(200).send({ calendarDay: calendarDay });
 });
-
+// GET calendar day info
 router.get("/api/calendarDays/:day", (req, res) => {
     const day = Number(req.params.day);
-    getCalendarDayInfo();
 
     if (day < 1 || day > 24) {
         return res.status(400).send({ error: "Day must be between 1 and 24."});

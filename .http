@@ -7,5 +7,5 @@ GET {{host}}/health
 GET {{host}}/api/calendarDays
 
 ### Calendar date info
-@day = 5
+@day = 25
 GET {{host}}/api/calendarDays/{{day}}

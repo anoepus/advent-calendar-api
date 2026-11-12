@@ -2,8 +2,10 @@ import express from 'express'; //import express from node_modules
 const app = express(); //
 const port = process.env.PORT ?? 8080
 
-import pagesRouter from './routers/calendarRouter.js';
-app.use(pagesRouter);
+import indexRouter from './routers/indexRouter.js'
+app.use(indexRouter);
+import calendarRouter from './routers/calendarRouter.js';
+app.use(calendarRouter);
 
 app.listen(port, (error) => {
     if (error) {
