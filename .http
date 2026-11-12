@@ -1,0 +1,10 @@
+@host = http://localhost:8080
+
+### Health check
+GET {{host}}/health
+
+### Index
+GET {{host}}/
+
+### Calendar dates
+GET {{host}}/api/calendarDays
