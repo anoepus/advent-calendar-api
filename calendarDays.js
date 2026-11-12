@@ -1,4 +1,4 @@
-const calendarDays = 
+export const calendarDays = 
 [
     {
         "id": 1,
@@ -31,5 +31,3 @@ const calendarDays =
         "url": "https://www.movie-map.com"
     }
 ];
-
-export default calendarDays;

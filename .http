@@ -3,8 +3,9 @@
 ### Health check
 GET {{host}}/health
 
-### Index
-GET {{host}}/
-
 ### Calendar dates
 GET {{host}}/api/calendarDays
+
+### Calendar date info
+@day = 5
+GET {{host}}/api/calendarDays/{{day}}
